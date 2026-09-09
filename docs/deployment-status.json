@@ -1,0 +1,47 @@
+{
+  "deployment_status": "DEPLOYMENT_READY_RESOURCE_LIMITED",
+  "published": false,
+  "public_endpoint_verified": false,
+  "github_repository": "shah-bakhsh/BalNLP",
+  "github_publication_error": "403 Resource not accessible by integration",
+  "providers": [
+    "Render",
+    "Railway"
+  ],
+  "paid_resources_activated": false,
+  "python_tests_passed": 46,
+  "frontend_tests_passed": 5,
+  "local_real_api": {
+    "version": "0.1.0",
+    "completed_tasks": [
+      "pos",
+      "ner",
+      "morph",
+      "parser"
+    ],
+    "failed_tasks": [],
+    "timings_ms": {
+      "pos": {
+        "load": 2815.45,
+        "inference": 4025.22
+      },
+      "ner": {
+        "load": 3648.21,
+        "inference": 5166.53
+      },
+      "morph": {
+        "load": 3618.22,
+        "inference": 5093.39
+      },
+      "parser": {
+        "load": 3955.85,
+        "inference": 4636.17
+      }
+    },
+    "total_ms": 35973.14,
+    "warnings": [],
+    "offset_unit": "unicode_code_points",
+    "offset_reference": "text (NFC normalized)"
+  },
+  "balmorph_status": "verified_notebook_integrated"
+}

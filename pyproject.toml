@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "balnlp"
+version = "0.1.0"
+description = "A unified, database-free Balochi NLP toolkit"
+requires-python = ">=3.12,<3.13"
+dependencies = ["pydantic==2.13.5", "pydantic-settings==2.15.0", "regex==2026.9.3"]
+
+[project.optional-dependencies]
+api = ["fastapi==0.141.1", "uvicorn==0.52.4"]
+inference = ["torch==2.14.0", "transformers==5.16.1", "safetensors==0.8.0", "sentencepiece==0.2.2", "huggingface-hub==1.30.0", "networkx==3.6.1"]
+dev = ["pytest==9.1.1", "httpx==0.28.1", "ruff==0.16.6"]
+
+[tool.setuptools.packages.find]
+include = ["balnlp*", "backend*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: downloads real model weights; opt-in only"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

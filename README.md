@@ -215,4 +215,3 @@ licenses are independent. Contributions follow [CONTRIBUTING.md](CONTRIBUTING.md
 BalMorph is enabled by default through `balnlp.morph_adapter:NotebookBalMorph`. All four tasks completed real local API inference. `enable_morph=False` remains available to disable it explicitly. Unknown lemma rules return null rather than guessed lemmas.
 
 A local BalPOS-only probe measured 964 MiB process RSS during inference; see `docs/memory-pos.json`. This exceeds the 512 MB free-host allowance. Low mode unloads each model safely, but does not make a single oversized model fit. The free deployment returns a clear resource error instead of attempting a known oversized load.
-

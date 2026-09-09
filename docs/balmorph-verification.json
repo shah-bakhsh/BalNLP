@@ -1,0 +1,98 @@
+{
+  "strict_checkpoint_load": "PASS",
+  "notebook_forward_logits_exact_match": true,
+  "registry": {
+    "name": "BalMorph",
+    "status": "configured",
+    "reason": null,
+    "checkpoint_available": true,
+    "inference_code_verified": true,
+    "loaded": false
+  },
+  "result": {
+    "text": "بلوچی متن",
+    "language": "bal",
+    "tokens": [
+      {
+        "id": 1,
+        "form": "بلوچی",
+        "start": 0,
+        "end": 5,
+        "sentence_id": 1,
+        "lemma": "بلوچی",
+        "upos": "ADJ",
+        "ner": "O",
+        "feats": {
+          "Number": "Sing"
+        },
+        "head": 2,
+        "deprel": "amod"
+      },
+      {
+        "id": 2,
+        "form": "متن",
+        "start": 6,
+        "end": 9,
+        "sentence_id": 1,
+        "lemma": "متن",
+        "upos": "NOUN",
+        "ner": "O",
+        "feats": {
+          "Number": "Sing"
+        },
+        "head": 0,
+        "deprel": "root"
+      }
+    ],
+    "entities": [],
+    "dependency_tree": {
+      "edges": [
+        {
+          "head": 2,
+          "dependent": 1,
+          "relation": "amod",
+          "sentence_id": 1
+        },
+        {
+          "head": 0,
+          "dependent": 2,
+          "relation": "root",
+          "sentence_id": 1
+        }
+      ]
+    },
+    "meta": {
+      "version": "0.1.0",
+      "completed_tasks": [
+        "pos",
+        "ner",
+        "morph",
+        "parser"
+      ],
+      "failed_tasks": [],
+      "timings_ms": {
+        "pos": {
+          "load": 2815.45,
+          "inference": 4025.22
+        },
+        "ner": {
+          "load": 3648.21,
+          "inference": 5166.53
+        },
+        "morph": {
+          "load": 3618.22,
+          "inference": 5093.39
+        },
+        "parser": {
+          "load": 3955.85,
+          "inference": 4636.17
+        }
+      },
+      "total_ms": 35973.14,
+      "warnings": [],
+      "offset_unit": "unicode_code_points",
+      "offset_reference": "text (NFC normalized)"
+    },
+    "conllu": "# sent_id = 1\n# text = بلوچی متن\n1\tبلوچی\tبلوچی\tADJ\t_\tNumber=Sing\t2\tamod\t_\t_\n2\tمتن\tمتن\tNOUN\t_\tNumber=Sing\t0\troot\t_\t_\n\n"
+  }
+}

@@ -1,0 +1,2 @@
+# Run from repository root. CPU wheels are installed separately (see README).
+-e .[api,inference]

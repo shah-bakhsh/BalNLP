@@ -1,0 +1,35 @@
+{
+  "task": "pos",
+  "before": {
+    "rss_mb": 33.46,
+    "peak_rss_mb": 33.46,
+    "limit_mb": null,
+    "minimum_model_budget_mb": 2048,
+    "mode": "balanced"
+  },
+  "loaded": {
+    "rss_mb": 633.54,
+    "peak_rss_mb": 633.54,
+    "limit_mb": null,
+    "minimum_model_budget_mb": 2048,
+    "mode": "balanced"
+  },
+  "after_inference": {
+    "rss_mb": 964.06,
+    "peak_rss_mb": 964.06,
+    "limit_mb": null,
+    "minimum_model_budget_mb": 2048,
+    "mode": "balanced"
+  },
+  "completed_tasks": [
+    "pos"
+  ],
+  "inference_ms": 3489.14,
+  "after_unload": {
+    "rss_mb": 339.01,
+    "peak_rss_mb": 964.07,
+    "limit_mb": null,
+    "minimum_model_budget_mb": 2048,
+    "mode": "balanced"
+  }
+}

@@ -1,0 +1,25 @@
+# Free API deployment. Current checkpoints exceed this plan: inference returns RESOURCE_LIMITED.
+services:
+  - type: web
+    name: balnlp-api
+    runtime: docker
+    repo: https://github.com/shah-bakhsh/BalNLP
+    plan: free
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: BALNLP_MEMORY_MODE
+        value: low
+      - key: BALNLP_MEMORY_LIMIT_MB
+        value: "512"
+      - key: BALNLP_WARMUP
+        value: "false"
+      - key: ENABLE_MORPH
+        value: "true"
+      - key: BALNLP_DEVICE
+        value: cpu
+      - key: FRONTEND_URL
+        sync: false
+      - key: REQUEST_TIMEOUT_SECONDS
+        value: "180"
