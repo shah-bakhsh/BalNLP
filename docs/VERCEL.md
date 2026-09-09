@@ -11,6 +11,6 @@ Production alias: https://balnlp-shah-bakhshs-projects.vercel.app
 Project: https://vercel.com/shah-bakhshs-projects/balnlp
 Deployment: dpl_DNcxUUV16WzNzazYNTV6pjCPzMgm
 
-This deployment was uploaded through the Vercel connector. Automatic GitHub linking is not verified. The connector's read/status tools currently cannot access the team, and the public alias redirects to Vercel login. Reconnect the appropriate team and configure public production access in Deployment Protection before publishing the domain.
+This deployment was uploaded through the Vercel connector. Automatic GitHub linking is not verified. The user updated Deployment Protection. On 2026-09-09 the public home and analysis pages returned HTTP 200 without a login redirect. A real browser submission reached Render and displayed the expected memory-limit error. The connector's read/status tools still lack team access, which does not prevent public browsing.
 
 The deployment uses NEXT_PUBLIC_API_URL=https://balnlp-api.onrender.com/api/v1. Render FRONTEND_URL matches the production alias. Public readiness and analysis currently return 503 RESOURCE_LIMITED, as expected for the free plan.

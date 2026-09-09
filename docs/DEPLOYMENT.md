@@ -12,7 +12,7 @@ Sources: https://render.com/docs/compute-plans and https://docs.railway.com/pric
 
 ## Portable Docker and Railway
 
-Use backend/Dockerfile with repository-root build context. Railway configuration is in railway.json. Keep BALNLP_MEMORY_MODE=low, BALNLP_WARMUP=false, ENABLE_MORPH=false, and one worker. Set FRONTEND_URL and HF_HOME through the provider. Linux container memory limits are automatically detected. No architecture change is needed between providers. Do not enable paid resources without explicit owner approval.
+Use backend/Dockerfile with repository-root build context. Railway configuration is in railway.json. Keep BALNLP_MEMORY_MODE=low, BALNLP_WARMUP=false, ENABLE_MORPH=true, and one worker. Set FRONTEND_URL and HF_HOME through the provider. Linux container memory limits are automatically detected. No architecture change is needed between providers. Do not enable paid resources without explicit owner approval.
 
 ## Capacity verification
 
@@ -29,4 +29,4 @@ Source publication succeeded. Render service srv-dagf47e7bikc73atl9eg is live on
 
 Verified public /health and /api/v1/models (200), /ready (503), and a real POST /api/v1/analyze (503 RESOURCE_LIMITED). CORS matches the Vercel production alias. The process remained healthy; it did not attempt an oversized model load.
 
-The Vercel deployment exists but currently requires Vercel login, and its connector cannot access the project team. Public frontend verification remains blocked on team/protection settings. No domain has been supplied yet.
+The Vercel frontend is public and was verified on 2026-09-09 after the user updated protection settings. A real Balochi browser submission reaches the API and displays RESOURCE_LIMITED; no predictions are generated on this host. Connector team access remains unavailable. No domain has been supplied yet.

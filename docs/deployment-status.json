@@ -44,7 +44,7 @@
     "offset_reference": "text (NFC normalized)"
   },
   "balmorph_status": "verified_notebook_integrated",
-  "github_commit": "ef46e459c088c19a2bf82789cb7a9dfd36cb96a2",
+  "github_commit": "bc74d2b331ab4732480e348ccdc1fc4d6f31b7ec",
   "render": {
     "service_id": "srv-dagf47e7bikc73atl9eg",
     "url": "https://balnlp-api.onrender.com",
@@ -59,8 +59,13 @@
   "vercel": {
     "deployment_id": "dpl_DNcxUUV16WzNzazYNTV6pjCPzMgm",
     "url": "https://balnlp-shah-bakhshs-projects.vercel.app",
-    "status": "CREATED_PROTECTED_NOT_PUBLICLY_VERIFIED",
-    "blocker": "Visitors redirect to Vercel login; connector cannot access project team scope."
+    "status": "DEPLOYED_AND_VERIFIED",
+    "blocker": null,
+    "verified_date": "2026-09-09",
+    "home_http": 200,
+    "analysis_page_http": 200,
+    "browser_api_connection_verified": true,
+    "browser_analysis_result": "RESOURCE_LIMITED"
   },
   "public_inference_verified": false
 }

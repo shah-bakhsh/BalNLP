@@ -49,7 +49,7 @@ Adapters can later share representations only if their trained architectures per
 | BalBERT | [shah-bakhsh/BalBERT](https://huggingface.co/shah-bakhsh/BalBERT) | Backbone, not loaded separately |
 | BalPOS | [shah-bakhsh/BalPOS](https://huggingface.co/shah-bakhsh/BalPOS) | Token classification |
 | BalNER v2 | [shah-bakhsh/BalNER-v2](https://huggingface.co/shah-bakhsh/BalNER-v2) | BIO token classification |
-| BalMorph v2 | [shah-bakhsh/BalMorph](https://huggingface.co/shah-bakhsh/BalMorph) | Awaiting original inference source |
+| BalMorph v2 | [shah-bakhsh/BalMorph](https://huggingface.co/shah-bakhsh/BalMorph) | Verified recovered notebook architecture |
 | BalParser v2 | [shah-bakhsh/BalParser](https://huggingface.co/shah-bakhsh/BalParser) | Exact author-supplied biaffine architecture |
 
 Official revisions are pinned in `balnlp/config.py`. All IDs and revisions can be
@@ -124,7 +124,7 @@ curl -X POST http://localhost:8000/api/v1/analyze \
 | POST | `/api/v1/analyze` | All tasks, or a `tasks` list |
 | POST | `/api/v1/pos` | POS only |
 | POST | `/api/v1/ner` | NER only |
-| POST | `/api/v1/morph` | Morphology only, pending integration |
+| POST | `/api/v1/morph` | Morphology only |
 | POST | `/api/v1/parse` | Dependency parsing only |
 
 Partial success is HTTP 200 with `meta.completed_tasks` and `meta.failed_tasks`.
@@ -214,6 +214,6 @@ Source is published at https://github.com/shah-bakhsh/BalNLP.
 
 Render API: https://balnlp-api.onrender.com/health — public health and registry checks passed. Analysis returns RESOURCE_LIMITED because the free plan has 512 MB RAM. No paid plan was activated.
 
-Vercel frontend: https://balnlp-shah-bakhshs-projects.vercel.app — deployment created, but visitors currently redirect to Vercel login. Production protection/team access must be corrected before claiming a public frontend. See docs/VERCEL.md for domain setup and docs/deployment-status.json for verification details.
+Vercel frontend: https://balnlp-shah-bakhshs-projects.vercel.app — public frontend verified on 2026-09-09. Home and analysis pages return HTTP 200 without login; a browser submission reaches the API and displays its resource-limit error. See docs/VERCEL.md for domain setup and docs/deployment-status.json for verification details.
 
 Overall status: DEPLOYMENT_READY_RESOURCE_LIMITED. The four-model pipeline works locally; live public inference is not available on the free API host.
