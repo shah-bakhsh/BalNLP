@@ -1,12 +1,12 @@
 {
   "deployment_status": "DEPLOYMENT_READY_RESOURCE_LIMITED",
-  "published": false,
-  "public_endpoint_verified": false,
+  "published": true,
+  "public_endpoint_verified": true,
   "github_repository": "shah-bakhsh/BalNLP",
-  "github_publication_error": "403 Resource not accessible by integration",
+  "github_publication_error": null,
   "providers": [
     "Render",
-    "Railway"
+    "Vercel"
   ],
   "paid_resources_activated": false,
   "python_tests_passed": 46,
@@ -43,5 +43,24 @@
     "offset_unit": "unicode_code_points",
     "offset_reference": "text (NFC normalized)"
   },
-  "balmorph_status": "verified_notebook_integrated"
+  "balmorph_status": "verified_notebook_integrated",
+  "github_commit": "ef46e459c088c19a2bf82789cb7a9dfd36cb96a2",
+  "render": {
+    "service_id": "srv-dagf47e7bikc73atl9eg",
+    "url": "https://balnlp-api.onrender.com",
+    "plan": "free",
+    "health_http": 200,
+    "models_http": 200,
+    "ready_http": 503,
+    "analysis_http": 503,
+    "analysis_error": "RESOURCE_LIMITED",
+    "cors_verified": true
+  },
+  "vercel": {
+    "deployment_id": "dpl_DNcxUUV16WzNzazYNTV6pjCPzMgm",
+    "url": "https://balnlp-shah-bakhshs-projects.vercel.app",
+    "status": "CREATED_PROTECTED_NOT_PUBLICLY_VERIFIED",
+    "blocker": "Visitors redirect to Vercel login; connector cannot access project team scope."
+  },
+  "public_inference_verified": false
 }

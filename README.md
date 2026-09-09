@@ -210,8 +210,10 @@ licenses are independent. Contributions follow [CONTRIBUTING.md](CONTRIBUTING.md
 
 ## Current deployment status
 
-`DEPLOYMENT_READY_RESOURCE_LIMITED` — source and hosting configurations are prepared. GitHub publication was rejected with HTTP 403 (integration Contents write access); no public endpoint has been deployed or verified. Render is primary and Railway is fallback. No paid plan, disk or compute was activated.
+Source is published at https://github.com/shah-bakhsh/BalNLP.
 
-BalMorph is enabled by default through `balnlp.morph_adapter:NotebookBalMorph`. All four tasks completed real local API inference. `enable_morph=False` remains available to disable it explicitly. Unknown lemma rules return null rather than guessed lemmas.
+Render API: https://balnlp-api.onrender.com/health — public health and registry checks passed. Analysis returns RESOURCE_LIMITED because the free plan has 512 MB RAM. No paid plan was activated.
 
-A local BalPOS-only probe measured 964 MiB process RSS during inference; see `docs/memory-pos.json`. This exceeds the 512 MB free-host allowance. Low mode unloads each model safely, but does not make a single oversized model fit. The free deployment returns a clear resource error instead of attempting a known oversized load.
+Vercel frontend: https://balnlp-shah-bakhshs-projects.vercel.app — deployment created, but visitors currently redirect to Vercel login. Production protection/team access must be corrected before claiming a public frontend. See docs/VERCEL.md for domain setup and docs/deployment-status.json for verification details.
+
+Overall status: DEPLOYMENT_READY_RESOURCE_LIMITED. The four-model pipeline works locally; live public inference is not available on the free API host.
