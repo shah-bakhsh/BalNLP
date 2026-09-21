@@ -1,6 +1,16 @@
-# Final repository tree
+# Repository structure
 
-Generated source inventory; dependencies, build output, model cache, and local environment files excluded.
+The source inventory below records the original application. The 2026-09-21 contributor
+and release additions are listed first; dependencies, build output, model cache, and
+local environment files are excluded.
+
+| Added area | Files |
+|---|---|
+| Project policies | SECURITY.md, SUPPORT.md, CODE_OF_CONDUCT.md, CITATION.cff, CHANGELOG.md |
+| Contributor forms | .github/ISSUE_TEMPLATE/, .github/PULL_REQUEST_TEMPLATE.md |
+| Model checks | .github/workflows/model-integration.yml |
+| Developer guides | docs/ARCHITECTURE.md, docs/DEVELOPMENT.md, docs/EVALUATION.md, docs/PRIVACY.md, docs/LICENSING.md |
+| Maintainer resources | docs/AUDIT.md, docs/IMPACT.md, docs/ROADMAP.md, docs/CONTRIBUTOR_TASKS.md, docs/RELEASE_DRAFT.md, docs/MAINTAINER_APPLICATION.md |
 
 ```text
 BalNLP/

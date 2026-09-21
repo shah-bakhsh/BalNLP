@@ -1,17 +1,30 @@
 # BalNLP
 
-**Open Balochi Natural Language Processing** — a Python library, FastAPI service, and
+**Arabic-script Balochi Natural Language Processing** — a Python library, FastAPI service, and
 Next.js workspace for exploring Arabic-script Balochi text.
 
 ![BalNLP desktop interface](docs/screenshots/home-desktop.png)
 
+[![CI](https://github.com/shah-bakhsh/BalNLP/actions/workflows/ci.yml/badge.svg)](https://github.com/shah-bakhsh/BalNLP/actions/workflows/ci.yml)
+
+**Development status:** source available; application license undecided. Version 0.1.0
+is package metadata, not a claim of PyPI publication. See [licensing](docs/LICENSING.md).
+
+## Why BalNLP exists
+
+BalNLP brings related Balochi NLP components into a common library, API, and RTL
+workspace. Consistent input handling and exports make the models easier to examine
+and integrate. Balochi speakers and researchers should be able to inspect predictions
+and contribute linguistic feedback. This goal is distinct from proven adoption or
+validated accuracy; see [impact evidence](docs/IMPACT.md) and [evaluation](docs/EVALUATION.md).
+
 ## Release status
 
-All four models now run through the unified API. BalMorph uses the recovered author notebook with strict checkpoint loading and exact forward-output verification. Real Balochi inference returns lemmas and morphological features. See [BalMorph verification](docs/balmorph-verification.json) and [source provenance](docs/BALMORPH_SOURCE.md).
+Repository verification records report that all four models ran through the unified API locally. BalMorph uses the recovered author notebook with strict checkpoint loading and exact forward-output verification. Real Balochi inference returns lemmas and morphological features. See [BalMorph verification](docs/balmorph-verification.json) and [source provenance](docs/BALMORPH_SOURCE.md).
 
-The real BalParser checkpoint has passed strict loading and CPU inference, including
+The recorded BalParser checks passed strict loading and CPU inference, including
 tree validation and CoNLL-U export. See [the release checks](docs/RELEASE_CHECKS.md) for
-the final verified status of every component. Unit and browser tests use fixtures
+dated verification evidence for each component. Unit and browser tests use fixtures
 only in test files. They do not establish model quality.
 
 **The published checkpoints cannot run within Render Free's 512 MB RAM.** Each is
@@ -32,11 +45,9 @@ can boot the API and serve health checks, but is not a working free inference cl
 
 ## Architecture
 
-```text
-Browser → Next.js (Vercel) → FastAPI (CPU host) → BalNLP core → Hugging Face cache
-                                                  │
-                            POS → unload → NER → unload → Morph → unload → Parser
-```
+The Next.js browser workspace calls FastAPI, which invokes the Python pipeline and
+loads checkpoint files from the Hugging Face cache. Low-memory mode loads and unloads
+each task in turn. See [architecture and source map](docs/ARCHITECTURE.md).
 
 The sequence is scheduling order, not a claim that separately trained models share
 an encoder or consume each other's predictions. The library has no FastAPI imports.
@@ -44,13 +55,20 @@ Adapters can later share representations only if their trained architectures per
 
 ## Models
 
-| Component | Public repository | Inference implementation |
+| Component | Repository/model | Current integration status |
 |---|---|---|
+| BalTokenizer | [shah-bakhsh/BalTokenizer](https://github.com/shah-bakhsh/BalTokenizer) | Related subword-tokenizer project; not integrated into this runtime |
 | BalBERT | [shah-bakhsh/BalBERT](https://huggingface.co/shah-bakhsh/BalBERT) | Backbone, not loaded separately |
 | BalPOS | [shah-bakhsh/BalPOS](https://huggingface.co/shah-bakhsh/BalPOS) | Token classification |
 | BalNER v2 | [shah-bakhsh/BalNER-v2](https://huggingface.co/shah-bakhsh/BalNER-v2) | BIO token classification |
 | BalMorph v2 | [shah-bakhsh/BalMorph](https://huggingface.co/shah-bakhsh/BalMorph) | Verified recovered notebook architecture |
 | BalParser v2 | [shah-bakhsh/BalParser](https://huggingface.co/shah-bakhsh/BalParser) | Exact author-supplied biaffine architecture |
+| BalNLP | [this repository](https://github.com/shah-bakhsh/BalNLP) | Unified Python/API/UI; source license pending |
+
+BalNLP uses its own word segmentation and each checkpoint's compatible subword tokenizer;
+the separate BalTokenizer must not be substituted without architecture/evaluation checks.
+The Hugging Face BalNER-v2 link is configured in source but could not be revalidated
+during the 2026-09-21 audit; see [audit](docs/AUDIT.md).
 
 Official revisions are pinned in `balnlp/config.py`. All IDs and revisions can be
 overridden through environment variables; local directory paths also work. The empty
@@ -61,7 +79,8 @@ See [model integration details](docs/MODELS.md).
 
 Requirements: **Python 3.12**, **Node.js 24**, and sufficient disk/RAM for the selected
 checkpoints. Dependencies are pinned, with a frontend lockfile. Commands below start
-from the repository root. In Windows PowerShell, use `Copy-Item` in place of `cp`.
+from a checkout of this repository; `pip install balnlp` is not yet a verified distribution route.
+In Windows PowerShell, use `Copy-Item` in place of `cp`.
 
 ```bash
 python -m venv .venv
@@ -153,9 +172,19 @@ npm run test:e2e
 npm start
 ```
 
+A model-free segmentation example (not model predictions):
+
+```python
+from balnlp.tokenizer import tokenize_balochi
+
+print([token.form for token in tokenize_balochi("بلوچی متن")])
+# ["بلوچی", "متن"]
+```
+
 The basic CI suite does not download model weights. It installs CPU PyTorch for
 small synthetic architecture and decoder tests. Browser tests mock HTTP responses;
-real integration tests are separate. GitHub Actions covers both suites and build.
+real integration tests are separate. GitHub Actions covers unit/fixture suites and the build; real checkpoint checks are
+manual. See [development and package builds](docs/DEVELOPMENT.md).
 
 ## Docker and deployment
 
@@ -197,23 +226,36 @@ infrastructure behavior remain the operator's responsibility.
 
 BalParser's author-reported test results are UAS 54.33%, LAS 45.23%, Macro F1 46.78%,
 Weighted F1 71.13%, and Root Accuracy 64.71%. These are not recomputed by the smoke
-tests. Other evaluation summaries: **[DATA REQUIRED]** until reviewed for publication.
+tests. Other evaluation summaries are not included until reviewed for publication.
+See the [evaluation protocol](docs/EVALUATION.md) and [roadmap](docs/ROADMAP.md).
 
 ## Screenshots, citation, license, and contributing
 
 [Desktop](docs/screenshots/home-desktop.png) · [Mobile](docs/screenshots/home-mobile.png)
 
-Citation: **[DATA REQUIRED]** — add the author's publication/DOI when available.
+Cite this software using [CITATION.cff](CITATION.cff) and record the exact commit used.
+No DOI or paper is claimed.
 The application license has **not** been selected; see [LICENSE](LICENSE). Model
 licenses are independent. Contributions follow [CONTRIBUTING.md](CONTRIBUTING.md).
 
 
-## Current deployment status
+## Recorded deployment status (2026-09-09)
 
-Source is published at https://github.com/shah-bakhsh/BalNLP.
+These are historical checks, not a fresh availability guarantee. Source is published at https://github.com/shah-bakhsh/BalNLP.
 
 Render API: https://balnlp-api.onrender.com/health — public health and registry checks passed. Analysis returns RESOURCE_LIMITED because the free plan has 512 MB RAM. No paid plan was activated.
 
 Vercel frontend: https://balnlp-shah-bakhshs-projects.vercel.app — public frontend verified on 2026-09-09. Home and analysis pages return HTTP 200 without login; a browser submission reaches the API and displays its resource-limit error. See docs/VERCEL.md for domain setup and docs/deployment-status.json for verification details.
 
 Overall status: DEPLOYMENT_READY_RESOURCE_LIMITED. The four-model pipeline works locally; live public inference is not available on the free API host.
+
+## Contributor and maintainer resources
+
+- [Contributing](CONTRIBUTING.md), [task proposals](docs/CONTRIBUTOR_TASKS.md), and [code of conduct](CODE_OF_CONDUCT.md)
+- [Security reporting](SECURITY.md), [privacy](docs/PRIVACY.md), and [support/contact](SUPPORT.md)
+- [Changelog](CHANGELOG.md), [release draft](docs/RELEASE_DRAFT.md), and [repository audit](docs/AUDIT.md)
+- [Project structure](docs/TREE.md), [impact](docs/IMPACT.md), and [maintainer application drafts](docs/MAINTAINER_APPLICATION.md)
+
+Acknowledgements: the Balochi language community and the maintainers of PyTorch,
+Transformers, Hugging Face Hub, FastAPI, Next.js, and the project's other dependencies.
+See [model provenance](docs/MODELS.md) for the independently maintained model sources.

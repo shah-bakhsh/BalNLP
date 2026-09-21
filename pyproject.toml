@@ -6,8 +6,17 @@ build-backend = "setuptools.build_meta"
 name = "balnlp"
 version = "0.1.0"
 description = "A unified, database-free Balochi NLP toolkit"
+readme = "README.md"
+authors = [{name = "Shah Bakhsh"}]
+keywords = ["balochi", "nlp", "low-resource-languages"]
 requires-python = ">=3.12,<3.13"
 dependencies = ["pydantic==2.13.5", "pydantic-settings==2.15.0", "regex==2026.9.3"]
+
+[project.urls]
+Homepage = "https://github.com/shah-bakhsh/BalNLP"
+Repository = "https://github.com/shah-bakhsh/BalNLP"
+Documentation = "https://github.com/shah-bakhsh/BalNLP#readme"
+Issues = "https://github.com/shah-bakhsh/BalNLP/issues"
 
 [project.optional-dependencies]
 api = ["fastapi==0.141.1", "uvicorn==0.52.4"]

@@ -1,3 +1,12 @@
+# Historical verification records
+
+These records describe earlier checks, not tests rerun by the 2026-09-21 audit.
+The BalMorph recovery update supersedes older morphology blockers. The 2026-09-09
+[deployment record](deployment-status.json) supersedes earlier claims that nothing
+was publicly deployed; it still does not establish public model inference.
+For current outstanding work see [AUDIT.md](AUDIT.md) and [ROADMAP.md](ROADMAP.md).
+The remaining text is retained as historical evidence and can contain superseded statuses.
+
 # Current update: BalMorph recovered and verified
 
 46 Python tests and five frontend tests pass. Strict checkpoint loading and exact logits against the author notebook class pass. The real unified API returns all four tasks, lemmas, features and valid CoNLL-U with no failed tasks. See balmorph-verification.json. Hosting remains resource-limited and not publicly deployed.

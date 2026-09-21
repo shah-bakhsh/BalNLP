@@ -20,3 +20,16 @@ rather than including credentials or an exploit against a live service in an iss
 Changes to tokenization must describe their effect on the models' evaluation protocol.
 Attach viewport screenshots for UI changes and keep all controls keyboard accessible.
 The application license must be selected by the owner before an open-source release.
+
+## Getting started
+
+Read [development](docs/DEVELOPMENT.md), [support](SUPPORT.md), and the
+[code of conduct](CODE_OF_CONDUCT.md). Choose a focused [task proposal](docs/CONTRIBUTOR_TASKS.md),
+check for an existing issue, and discuss scope before substantial work. These proposals
+are not automatically opened issues or assigned work. Documentation, accessibility,
+linguistic feedback, and reproducible bug reports are useful contributions.
+
+Use the issue forms and PR template. Explain what evidence is synthetic, real-model,
+or author-reported; attach only text/data you have permission to share. Document any
+checks you could not run. Source licensing remains unresolved: discuss permissions
+with the maintainer before submitting code, and do not assume a license grant or CLA.
