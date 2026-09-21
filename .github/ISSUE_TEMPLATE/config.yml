@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Private security reporting
+    url: https://github.com/shah-bakhsh/BalNLP/blob/main/SECURITY.md
+    about: Read the private disclosure route before reporting a vulnerability.

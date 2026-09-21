@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use BalNLP, cite this software and record the exact commit you used."
+type: software
+title: "BalNLP: Arabic-script Balochi NLP toolkit"
+authors:
+  - given-names: Shah
+    family-names: Bakhsh
+repository-code: "https://github.com/shah-bakhsh/BalNLP"
+url: "https://github.com/shah-bakhsh/BalNLP"
+abstract: "A Python library, FastAPI service, and web workspace for Arabic-script Balochi analysis."
+keywords:
+  - Balochi
+  - natural language processing
+  - low-resource languages
