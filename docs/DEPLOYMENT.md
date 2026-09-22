@@ -20,7 +20,7 @@ Run python -m scripts.memory_probe --task pos on an adequately sized host. It re
 
 BalMorph now uses the recovered verified notebook adapter and is enabled by default. All four models passed real local API inference. Free-host memory limits still apply; this does not imply public deployment.
 
-The optional combined static-site Docker example remains under deploy/huggingface for portability only; Render/Railway are the selected targets. Docker image build requires a running daemon. A selected application source license is still needed before labeling the repository open source.
+The optional combined static-site Docker example remains under deploy/huggingface for portability only; Render/Railway are the selected targets. Docker image build requires a running daemon. The application source is Apache-2.0; model weights and datasets retain separate terms.
 
 
 ## Live hosting attempt
