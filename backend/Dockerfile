@@ -2,7 +2,7 @@ FROM python:3.12-slim
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 HF_HOME=/cache/huggingface BALNLP_DEVICE=cpu
 WORKDIR /app
 RUN useradd --create-home --uid 10001 balnlp && mkdir -p /cache/huggingface && chown -R balnlp:balnlp /cache
-COPY pyproject.toml README.md LICENSE ./
+COPY pyproject.toml README.md LICENSE NOTICE ./
 COPY balnlp ./balnlp
 COPY backend ./backend
 RUN pip install --no-cache-dir torch==2.14.0 --index-url https://download.pytorch.org/whl/cpu && pip install --no-cache-dir '.[api,inference]'

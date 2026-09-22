@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 message: "If you use BalNLP, cite this software and record the exact commit you used."
 type: software
+license: Apache-2.0
 title: "BalNLP: Arabic-script Balochi NLP toolkit"
 authors:
   - given-names: Shah

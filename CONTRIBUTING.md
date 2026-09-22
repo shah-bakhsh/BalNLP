@@ -19,7 +19,7 @@ rather than including credentials or an exploit against a live service in an iss
 
 Changes to tokenization must describe their effect on the models' evaluation protocol.
 Attach viewport screenshots for UI changes and keep all controls keyboard accessible.
-The application license must be selected by the owner before an open-source release.
+The application source is licensed under Apache-2.0; see LICENSE and NOTICE.
 
 ## Getting started
 
@@ -31,5 +31,6 @@ linguistic feedback, and reproducible bug reports are useful contributions.
 
 Use the issue forms and PR template. Explain what evidence is synthetic, real-model,
 or author-reported; attach only text/data you have permission to share. Document any
-checks you could not run. Source licensing remains unresolved: discuss permissions
-with the maintainer before submitting code, and do not assume a license grant or CLA.
+checks you could not run. Submit only material you have the right to contribute. Contributions intentionally
+submitted for inclusion follow Apache-2.0 Section 5 unless explicitly stated otherwise.
+Discuss third-party material and any different terms with the maintainer before submission.

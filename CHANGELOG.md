@@ -5,6 +5,10 @@ currently reads 0.1.0; no GitHub release was listed during the 2026-09-21 audit.
 
 ## Unreleased
 
+### Licensing
+- Owner approved Apache-2.0 for owned BalNLP source on 2026-09-22.
+- Added source attribution and SPDX package/citation metadata; model/data terms remain separate.
+
 ### Added
 - Security, support, and community conduct policies; software citation metadata.
 - Structured issue forms, a pull request checklist, and contributor task proposals.
@@ -25,7 +29,7 @@ currently reads 0.1.0; no GitHub release was listed during the 2026-09-21 audit.
 - No claim of a new vulnerability fix or a completed dependency vulnerability audit.
 
 ### Known limitations
-- Source license is undecided; no open-source license has been granted.
+- Source is Apache-2.0; separate model, dataset, and third-party permissions still require review.
 - Public inference remains unverified in this audit; recorded 512 MB hosting cannot
   run the published checkpoints. Model quality has not been independently recomputed.
 - PyPI publication, name availability, and full Python static typing remain pending.
