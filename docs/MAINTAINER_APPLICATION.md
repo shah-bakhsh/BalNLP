@@ -9,9 +9,9 @@ https://claude.com/contact-sales/claude-for-oss on 2026-09-21. It describes rout
 on package dependents/downloads, recognized core contributor roles, external merged
 PRs, external contributors, and infrastructure criticality, plus discretionary review.
 BalNLP's audited evidence does not establish any threshold. Eligibility based on the
-maintainer's other work was not assessed. Source licensing is also unresolved.
+maintainer's other work was not assessed. The owner approved Apache-2.0 for owned BalNLP source on 2026-09-22.
 Improving documentation does not itself qualify a project. Recheck current terms and
-resolve licensing before presenting BalNLP as open source.
+verify the Apache-2.0 update is published before using these drafts.
 
 ## “Tell us about the project's reach and impact”
 
@@ -24,8 +24,7 @@ researchers, students, and developers can experiment with fewer integration step
 My aim is useful language infrastructure for Balochi, with human linguistic review
 and reproducible evaluation. I am not claiming established adoption: the repository
 had 0 stars and 0 forks when checked on 21 September 2026, and I do not have verified
-download, dependent-package, or external-user figures. Source licensing is still being
-finalized, and the recorded free API host lacks sufficient memory for public model
+download, dependent-package, or external-user figures. The application source is licensed under Apache-2.0, and the recorded free API host lacks sufficient memory for public model
 inference. I am seeking discretionary consideration based on the project's scope and
 maintenance needs, not claiming that it meets the program's numerical thresholds.
 
@@ -44,14 +43,13 @@ held-out evaluation, or human decisions about licensing and research claims.
 I'm developing BalNLP, a Python/API/web toolkit for Arabic-script Balochi analysis.
 I'm looking for help with permitted Balochi examples, linguistic feedback, tokenizer
 edge cases, RTL accessibility, documentation, reproducible evaluation, and bug reports.
-The source license is still undecided, so please discuss reuse or code contributions
-with me first. You can review the project and contributor tasks at
+The application source is Apache-2.0; model and dataset terms are separate. You can review the project and contributor tasks at
 https://github.com/shah-bakhsh/BalNLP. Specific feedback and useful contributions are
 welcome; there is no request for stars or activity for its own sake.
 
 ## Outreach plan
 
-After licensing is settled, share a reproducible example with relevant Hugging Face
+After the approved license update is published, share a reproducible example with relevant Hugging Face
 communities, low-resource NLP groups, Balochi language researchers, Pakistani university
 CS/linguistics departments, and student open-source groups. Ask each group for a concrete
 review task suited to its expertise. Obtain permission before naming adopters or quoting

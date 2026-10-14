@@ -7,7 +7,7 @@ Next.js workspace for exploring Arabic-script Balochi text.
 
 [![CI](https://github.com/shah-bakhsh/BalNLP/actions/workflows/ci.yml/badge.svg)](https://github.com/shah-bakhsh/BalNLP/actions/workflows/ci.yml)
 
-**Development status:** source available; application license undecided. Version 0.1.0
+**Development status:** Apache-2.0 source license. Version 0.1.0
 is package metadata, not a claim of PyPI publication. See [licensing](docs/LICENSING.md).
 
 ## Why BalNLP exists
@@ -63,7 +63,7 @@ Adapters can later share representations only if their trained architectures per
 | BalNER v2 | [shah-bakhsh/BalNER-v2](https://huggingface.co/shah-bakhsh/BalNER-v2) | BIO token classification |
 | BalMorph v2 | [shah-bakhsh/BalMorph](https://huggingface.co/shah-bakhsh/BalMorph) | Verified recovered notebook architecture |
 | BalParser v2 | [shah-bakhsh/BalParser](https://huggingface.co/shah-bakhsh/BalParser) | Exact author-supplied biaffine architecture |
-| BalNLP | [this repository](https://github.com/shah-bakhsh/BalNLP) | Unified Python/API/UI; source license pending |
+| BalNLP | [this repository](https://github.com/shah-bakhsh/BalNLP) | Unified Python/API/UI; Apache-2.0 source |
 
 BalNLP uses its own word segmentation and each checkpoint's compatible subword tokenizer;
 the separate BalTokenizer must not be substituted without architecture/evaluation checks.
@@ -235,7 +235,7 @@ See the [evaluation protocol](docs/EVALUATION.md) and [roadmap](docs/ROADMAP.md)
 
 Cite this software using [CITATION.cff](CITATION.cff) and record the exact commit used.
 No DOI or paper is claimed.
-The application license has **not** been selected; see [LICENSE](LICENSE). Model
+The application source is licensed under **Apache-2.0**; see [LICENSE](LICENSE) and [NOTICE](NOTICE). Model
 licenses are independent. Contributions follow [CONTRIBUTING.md](CONTRIBUTING.md).
 
 

@@ -1,24 +1,19 @@
-# Licensing status and release decision
+# Licensing
 
-The existing [LICENSE](../LICENSE) explicitly grants no open-source license. A public
-repository alone does not establish permission to reuse or redistribute its source.
-BalNLP should be described as working toward an open-source release until the owner
-selects a license and confirms rights to contributed and recovered code.
+The owner approved Apache-2.0 for BalNLP source that they own and have the right to
+license on 2026-09-22. See [LICENSE](../LICENSE) and [NOTICE](../NOTICE).
+This approval does not establish ownership of third-party material or relicense it.
 
-| Material | Current treatment | Required before redistribution |
-|---|---|---|
-| BalNLP source | License not selected | Owner confirms provenance and chooses a standard license |
-| Model/checkpoint files | Separate repositories and terms | Read license at each pinned revision; preserve attribution |
-| Training/evaluation datasets | Not licensed by this source repository | Confirm permissions, consent, provenance, and applicable dataset terms |
-| Third-party dependencies | Their own licenses | Review notices and distribution obligations |
-| BalTokenizer | Separate project; README says unlicensed | Obtain its owner's licensing decision before reuse |
+| Material | License treatment |
+|---|---|
+| Owned BalNLP application source | Apache-2.0 |
+| Model/checkpoint files | Terms at each model repository and pinned revision |
+| Training/evaluation datasets | Their own licenses, permissions, and consent requirements |
+| Third-party dependencies | Their own licenses and attribution notices |
+| Separately maintained components, including BalTokenizer | Their own repository terms; this decision applies only to BalNLP |
 
-Apache-2.0 is a candidate for owner review because it includes explicit patent terms;
-MIT is another common permissive option. This is a proposed release decision, not a
-license grant or a determination of third-party rights. Confirm the recovered
-BalMorph notebook and BalParser implementation's provenance before granting rights.
-No model card license label automatically applies to this application or its datasets.
-
-Once approved: replace the existing notice with the exact chosen license, add correct
-copyright attribution, update package metadata and documentation, and review contributor
-permissions. Do not include unapproved weights or datasets in a package distribution.
+Preserve copyright and attribution notices when redistributing. Before bundling any
+third-party material, verify provenance and compatibility, including the recovered
+BalMorph notebook and BalParser architecture sources. No weights or datasets are
+included in the Python package by this licensing change. Future contributions follow
+Apache-2.0 Section 5 unless explicitly stated otherwise; see [contributing](../CONTRIBUTING.md).

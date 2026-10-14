@@ -26,7 +26,8 @@ This release draft does not claim a security certification or newly fixed vulner
 
 ## Known limitations and release gates
 
-Source licensing is unresolved. PyPI publication/name ownership, fresh full-model
+The application source is Apache-2.0; third-party provenance and model/data terms
+still need review. PyPI publication/name ownership, fresh full-model
 verification, Docker startup, and adequate-memory deployment require maintainer review.
 The recorded free host cannot run published checkpoints. Accuracy remains author-reported
 unless reproduced under a documented evaluation protocol. See [development](DEVELOPMENT.md),

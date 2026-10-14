@@ -16,7 +16,8 @@ for the limits of existing evidence.
 
 Potential uses include researcher experiments, student NLP exercises, annotation
 review, and developer API integration. These are intended uses, not verified deployments
-by external institutions. The application source license remains undecided.
+by external institutions. The owner approved Apache-2.0 for owned application source on 2026-09-22;
+this does not change the dated adoption snapshot below.
 
 ## Adoption snapshot
 

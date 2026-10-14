@@ -8,7 +8,7 @@ fixture-based CI. Their presence does not imply complete linguistic validation.
 
 | Period | Work | Completion evidence |
 |---|---|---|
-| Days 1–7 | Owner licensing decision, private reporting contact, review this audit, verify package build | Approved license/provenance record; green checks |
+| Days 1–7 | Confirm third-party licensing provenance, private reporting contact, review this audit, verify package build | Approved license/provenance record; green checks |
 | Days 8–14 | Add permitted Balochi examples, tokenizer edge cases, RTL accessibility review | Reviewed examples and focused tests/PRs |
 | Days 15–21 | Define held-out evaluation protocol; run real models on adequate CPU hardware | Reproducible command, revision/hardware record, human feedback |
 | Days 22–30 | Test Docker, verify deployment, review package name and release draft | Image startup/API checks and explicit release decision |

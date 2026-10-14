@@ -30,8 +30,8 @@ python -m twine check dist/*
 Use a clean checkout/environment. Inspect wheel and source archive contents, install
 the wheel in a fresh Python 3.12 environment, run `python -m pip check`, import
 `balnlp`, and run a known local example with the appropriate extras. CI checks package
-construction and core import without downloading checkpoints. A build is not permission
-to redistribute code or models. Resolve [licensing](LICENSING.md) before publication.
+construction and core import without downloading checkpoints. The source is Apache-2.0, while
+model/data and third-party terms remain separate; review [licensing](LICENSING.md) before publication.
 
 ## Versioning
 
